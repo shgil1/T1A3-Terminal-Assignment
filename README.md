@@ -75,3 +75,11 @@
 ## Commenting 
 - Indention
 - Define function, what is it about, what types of argument it accepts, and what output you expect from that specfic function  
+
+## Important things to note for the README:
+- And generally, for the class: just remembering the portfolio submissions -- please, please, please, confirm that you can run your submission in its submission structure before submitting it. We can NOT edit your submissions. If your submission does not work for you, it will not work for us. 
+
+- Part of the assessment is to write instructions on how to run your app - this is what those instructions should be for. 
+If we have to cd into a specific directory to run things, make sure that's noted.
+
+- If you feel like you have to completely rearrange your project to meet the submission structure: stop. Just make new folders for the submission ZIP, move your terminal project into the src folder of the submission folders, and make sure the instruction in the submission readme says to cd into the src/YourProjectHere folder.

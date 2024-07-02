@@ -1,26 +1,26 @@
 [
-    {
-        "First_Name": "sharla",
-        "Last_Name": "gilbert",
-        "Date": "24/07/2024",
-        "Rostered_Start": "0900",
-        "Rostered_End": "1700",
-        "Hours_Worked": 8.0
-    },
-    {
-        "First_Name": "sharla",
-        "Last_Name": "gilbert",
-        "Date": "25/05/2024",
-        "Rostered_Start": "0600",
-        "Rostered_End": "230",
-        "Hours_Worked": 17.0
-    },
-    {
-        "First_Name": "jess",
-        "Last_Name": "lee",
-        "Date": "09/05/3034",
-        "Rostered_Start": "0900",
-        "Rostered_End": "1700",
-        "Hours_Worked": 8.0
-    }
+{
+    "First_Name": "Sharla",
+    "Last_Name": "Gilbert",
+    "Date": "23/07/2024",
+    "Rostered_Start": "0900",
+    "Rostered_End": "1700",
+    "Hours_Worked": 8.0
+},
+{
+    "First_Name": "Maya",
+    "Last_Name": "Smith",
+    "Date": "24/07/2024",
+    "Rostered_Start": "0830",
+    "Rostered_End": "1630",
+    "Hours_Worked": 8.0
+},
+{
+    "First_Name": "Jeremy",
+    "Last_Name": "Lee",
+    "Date": "25/07/2024",
+    "Rostered_Start": "0730",
+    "Rostered_End": "1530",
+    "Hours_Worked": 8.0
+}
 ]
