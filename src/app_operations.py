@@ -109,6 +109,8 @@ def validate_time_format(time_str):
     except ValueError:
         return False
 
+
+
 def add_shift(first_name, last_name):
     """Add a new shift based on user input.
     Function:
@@ -137,3 +139,22 @@ def add_shift(first_name, last_name):
     }
     print("\nShift added successfully!")
     return shift
+
+def calculate_hours_for_date(shifts, date_str):
+    """Calculate total hours worked on a given date.
+    Function: 
+    - Calculates the sum of hours worked by an employee on a given date by scanning list of shifts and totalling hours for shifts that occured on that date
+
+    Parameters:
+    'date_str': A str representing the target date for the total hours worked to be calculated formatted as (dd/mm/yyyy)
+
+    Return:
+    'total_hours': Float value total number of hours calculated for that specific date
+    """
+    specific_date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
+
+    total_hours = sum(
+        shift['Hours_Worked'] for shift in shifts
+        if datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") == specific_date
+    )
+    return total_hours
