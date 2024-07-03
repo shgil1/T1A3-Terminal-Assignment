@@ -105,8 +105,7 @@ def validate_time_format(time_str):
         return False
 
 def validate_name_format(name_str):
-    """ Validate that the name contains only letters 
-    """
+    """ Validate that the name contains only letters """
     if name_str.isalpha():
         return True
     else:
