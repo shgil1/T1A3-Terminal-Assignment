@@ -59,7 +59,6 @@ def calculate_hours_worked(date_str, start_time_str, end_time_str):
     date_str: String for date of shift is expected in the format of dd/mm/yyyy
     start_time_str: String for start of shift is expected in the 24 hour format to avoid confusion for am or pm shifts
     end_time_str: String for end of shift in 24 hour format
-
     """
     date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
     start_time = datetime.datetime.strptime(start_time_str, "%H%M").time()
@@ -74,6 +73,25 @@ def calculate_hours_worked(date_str, start_time_str, end_time_str):
     duration = end_datetime - start_datetime
     return duration.total_seconds() / 3600.0
 
+def validate_input(prompt, validation_func):
+    """Prompt user input and validate it using the provided validation function.
+    Function:
+    - Initiates a loop via 'prompt' string to prompt user for input
+    - Each input received from the user is passed to the 'validation_func', if true, the input is considered valid and the function breaks out of the loop. If false, the function prints an error message saying "Invalid input. Please try again" and re-prompts the user. This loop ensures the function does not return until it receives valid input
+
+    Parameters:
+    'prompt': A string that is displayed to users to input the correct date format (dd/mm/yyyy)
+    'validation_func': A callback function that takes a single string argument and returns a boolean
+
+    Return:
+    'user_input': This function returns the user input as a string after it has been validated by the 'validation_func' to ensure the output of function is always valid as per the defined criteria 
+    """
+    while True:
+        user_input = input(prompt)
+        if validation_func(user_input):
+            return user_input
+        else:
+            print("Invalid input. Please try again.")
 
 def add_shift(first_name, last_name):
     """Add a new shift based on user input."""
