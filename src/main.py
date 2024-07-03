@@ -1,9 +1,10 @@
 from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, display_shifts, add_shift, calculate_hours_for_date, find_start_of_week, validate_name_format
 from file_operations import load_shifts_from_file, save_shifts_to_file
 
+FILE_PATH = '../data/shifts.json'
+
 def main():
-    file_path = "./shifts.json"
-    shifts = load_shifts_from_file(file_path)
+    shifts = load_shifts_from_file(FILE_PATH)
 
     print("Hello! Welcome to your shift tracker, what would you like to do today?")
     options = """
@@ -22,7 +23,7 @@ def main():
             last_name = validate_input("Last Name: ", validate_name_format)
             shift = add_shift(first_name, last_name)
             shifts.append(shift)
-            save_shifts_to_file(file_path, shifts)
+            save_shifts_to_file(FILE_PATH, shifts)
             print("Shift added and saved successfully!")
         
         elif choice == '2':
@@ -30,7 +31,7 @@ def main():
         
         elif choice == '3':
             date_for_calculation = validate_input("Enter a date (dd/mm/yyyy) to calculate weekly hours from: ", validate_date_format)
-            total_hours = calculate_total_hours(shifts, specific_date)
+            total_hours = calculate_total_hours(shifts, date_for_calculation)
             print(f"\nTotal hours worked for the week of {date_for_calculation}: {total_hours:.2f} hours")
         
         elif choice == '4':
@@ -44,3 +45,6 @@ def main():
 
         else:
             print("Invalid choice, please enter a number between 1 and 5.")
+
+if __name__ == "__main__":
+    main()
