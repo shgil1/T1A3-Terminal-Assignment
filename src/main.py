@@ -32,3 +32,15 @@ def main():
             date_for_calculation = validate_input("Enter a date (dd/mm/yyyy) to calculate weekly hours from: ", validate_date_format)
             total_hours = calculate_total_hours(shifts, specific_date)
             print(f"\nTotal hours worked for the week of {date_for_calculation}: {total_hours:.2f} hours")
+        
+        elif choice == '4':
+            specific_date = validate_input("Enter a specific date (dd/mm/yyyy) to calculate hours for that day: ", validate_date_format)
+            total_hours = calculate_hours_for_date(shifts, specific_date)
+            print(f"\nTotal hours worked on {specific_date}: {total_hours:.2f}")
+        
+        elif choice == '5':
+            print("Ok! Enjoy your day, see you next time!")
+            break
+
+        else:
+            print("Invalid choice, please enter a number between 1 and 5.")
