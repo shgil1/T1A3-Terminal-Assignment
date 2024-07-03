@@ -93,6 +93,20 @@ def validate_input(prompt, validation_func):
         else:
             print("Invalid input. Please try again.")
 
+def validate_date_format(date_str):
+    """Validate date format."""
+    try:
+        datetime.datetime.strptime(date_str, "%d/%m/%Y")
+        return True
+    except ValueError:
+        return False
+
+
+
+
+
+
+
 def add_shift(first_name, last_name):
     """Add a new shift based on user input."""
 
