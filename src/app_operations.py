@@ -176,3 +176,20 @@ def calculate_hours_for_date(shifts, date_str):
         if datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") == specific_date
     )
     return total_hours
+
+def find_start_of_week(date_str):
+    """Determine Monday as the start of the week for a given date.
+    Function:
+    - Allows other functions to calculate hours worked starting from a Monday
+    - Substracts number of days that have passed since the last Monday from given date 'date.weekday()' where Monday is '0' and Sunday is '6'
+    - 'timedelta' substracts number of days from the date to align to the beginning of the week
+
+    Parameters:
+    'date_str': A string representing date, referencing point to be calculated starting from Monday 
+
+    Return:
+    'start_of_week': A datetime object calculated by adjusting provided date backward to most recent Monday
+    """
+    date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
+    start_of_week = date - datetime.timedelta(days=date.weekday())  # Adjust to Monday
+    return start_of_week
