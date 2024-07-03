@@ -37,9 +37,10 @@ def main():
             display_shifts(employee_shifts)
         
         elif choice == '3':
+            # Enter a date in the format dd/mm/yyyy to display how many hours worked within that
             specific_date = validate_input("Enter the date (dd/mm/yyyy) for which to calculate your weekly hours: ", validate_date_format)
             total_hours = calculate_total_hours(shifts, first_name, last_name, specific_date)
-            print(f"\nTotal hours worked by you during the week containing {specific_date}: {total_hours:.2f} hours")
+            print(f"\nTotal hours worked by you during the week of {specific_date}: {total_hours:.2f} hours")
         
         elif choice == '4':
             specific_date = validate_input("Enter a specific date (dd/mm/yyyy) to calculate hours for that day: ", validate_date_format)

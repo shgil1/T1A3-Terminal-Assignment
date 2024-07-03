@@ -10,29 +10,36 @@ def convert_time_format(time_str):
     """
     return datetime.datetime.strptime(time_str, "%H%M").time()
 
-def calculate_total_hours(shifts, first_name, last_name, specific_date):
-    """ Calculate total hours worked for a particular employee on the specified given week.
+def calculate_total_hours(shifts, first_name, last_name, date_str, mode='daily'):
+    """ Calculate total hours worked for a particular employee for either the entire week or a single day based on a specific date inputted.
     Function: 
     - Parses the 'specific_date' into a 'datetime.datetime' object
     - Uses 'find_start_of_week' to adjust 'specific_date' to ensure the calculation of the week begins from the Monday
-    
+    - Calculates hours worked only on the day specified by 'date_str'
+
     Parameters:
     'shifts': List of dictionaries, each dictionary represents a shift and must include: 'date', 'Hours_worked', 'First_Name', 'Last_Name' <-- These parameters are used to filter shifts to those relevant to the specified employee, identifiable by their name (first/last)
     'specific_date': A string representing the start date from which the calculation begins (dd/mm/yyyy) and the function will then calculate the total hours from this date through the subsequent six days, constituting a full week
+    'mode': This string specifies the mode of calculation with possible values of daily or weekly, if daily then hours are calculated from results on 'date_str' or if weekly, then results are calculated based on total hours from Monday to Sunday of week containing 'date_str'
 
     Returns:
     'total_hours': Float, Calculation for the total number of hours worked within the specified period by summing up the 'hours_worked' from the filtered shifts during that week for the identified employee
     """
-    specific_date_dt = datetime.datetime.strptime(specific_date, "%d/%m/%Y")
-    start_of_week = specific_date_dt - datetime.timedelta(days=specific_date_dt.weekday())  # Adjust to Monday
-    end_of_week = start_of_week + datetime.timedelta(days=6)  # Calculate end of the week (Sunday)
-
+    date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
+    if mode == 'weekly':
+        # Adjust date to the start of the week (Monday)
+        start_date = date - datetime.timedelta(days=date.weekday())
+        end_date = start_date + datetime.timedelta(days=6)
+    else:
+        # For daily mode, start and end dates are the same
+        start_date = end_date = date
+    
+    # Calculate total hours
     total_hours = sum(
-        shift['Hours_Worked'] for shift in shifts 
-        if (datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") >= start_of_week and
-            datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") <= end_of_week and
-            shift['First_Name'].lower() == first_name.lower() and
-            shift['Last_Name'].lower() == last_name.lower())
+        shift['Hours_Worked'] for shift in shifts
+        if start_date <= datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") <= end_date and
+           shift['First_Name'].lower() == first_name.lower() and
+           shift['Last_Name'].lower() == last_name.lower()
     )
     return total_hours
 
