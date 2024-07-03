@@ -101,7 +101,13 @@ def validate_date_format(date_str):
     except ValueError:
         return False
 
-
+def validate_time_format(time_str):
+    """Validate time format."""
+    try:
+        datetime.datetime.strptime(time_str, "%H%M")
+        return True
+    except ValueError:
+        return False
 
 
 
