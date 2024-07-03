@@ -10,7 +10,43 @@ def convert_time_format(time_str):
     """
     return datetime.datetime.strptime(time_str, "%H%M").time()
 
+def calculate_total_hours(shifts, period="weekly", specific_date=None, end_date=None):
+    """
+    Calculate total hours worked for the specified period starting from the given date.
+    If the time period is custom, calculate between the specific_date and end_date.
+    Function: 
+    - Depending on the 'period' parameter, the function determines the start and end dates for the calculation
+    - Calculation for 'weekly' and 'fortnightly' options
+    - Calculates based on week starting on Monday for the provided 'specific_date' and adjusts 'end_date' accordingly
+    - Calulates the hours by iterating through 'shifts' list to check if each shift date falls between 'start_date' and 'end_date', if it does then it is included in the total
 
+    Parameters:
+    'shifts': List of dictionaries, each dictionary represents a shift and must include two key-value pairs: date and hours_worked
+    'period': A string indicating period type for which total hours should be calculated, defaults to 'weekly'
+    'specific_date': A string representing the start date from which the calculation begins (dd/mm/yyyy) if not provided, the current date is used
+    'end_date': A string representing the end from which the calculation runs (dd/mm/yyyy) this is only used if the 'period' is set to 'custom'
+
+    Returns:
+    'total_hours': Float, Caluclation for the total number of hours worked within the specified period by summing up the 'hours_worked' values for all shifts that fall within the determined date range
+    """
+    if period == "custom" and specific_date and end_date:
+        start_date = datetime.datetime.strptime(specific_date, "%d/%m/%Y")
+        end_date = datetime.datetime.strptime(end_date, "%d/%m/%Y")
+    else:
+        # Assuming specific_date is provided, find the start of the week
+        start_date = datetime.datetime.strptime(specific_date, "%d/%m/%Y") if specific_date else datetime.datetime.now()
+        start_date = start_date - datetime.timedelta(days=start_date.weekday())  # Adjust to Monday
+        if period == "fortnightly":
+            end_date = start_date + datetime.timedelta(days=13)  # Two weeks minus one day
+        else:  # default to weekly
+            end_date = start_date + datetime.timedelta(days=6)  # One week
+
+    total_hours = sum(
+        shift['Hours_Worked'] for shift in shifts 
+        if datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") >= start_date and
+           datetime.datetime.strptime(shift['Date'], "%d/%m/%Y") <= end_date
+    )
+    return total_hours
 
 def calculate_hours_worked(date_str, start_time_str, end_time_str):
     """Calculate the hours worked for a single shift.

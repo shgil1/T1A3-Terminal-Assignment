@@ -4,18 +4,28 @@
 ## Overview:
 - This app is designed to allow employees to log and track their shifts. It will provide users with a report on the total amount of hours they have worked within a weekly or fortnightly basis. 
 
-### Feature 1: User can make and edit shift details
+### Feature 1: User Menu System:
+- Provides a clear set of 5 total options for users to select from to enhance the user interface
+- Offers various functionalities through a simple menu-drive interface that is easy to use
+
+### Feature 2: User can make and edit shift details
 - Users are able to input their rostered shift hours 
 - Users are able to add new shift details 
 
-### Feature 2: Calculate total hours worked 
+### Feature 3: Display all shifts:
+- Users are able to select from the menu to see all shifts that they have saved displayed at once
+
+### Feature 4: Calculate total hours worked:
 - The total hours worked per week or per fortnight will be calculated based upon the shift start/end time and the date provided by the user 
 
-### Feature 3: Error handling for user input and file operations 
+### Feature 5: Calculate total hours from a specific date:
+- Users can input a date and see how many hours they worked
 
-### Feature 4: Save to JSON file 
+### Feature 6: Error handling for user input and file operations 
 
-### Feature 5: Load data from JSON file 
+### Feature 7: Save to JSON file 
+
+### Feature 8: Load data from JSON file 
 
 ## What the features need to include:
 - Walkthrough of the logic of the application
