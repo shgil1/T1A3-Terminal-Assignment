@@ -24,3 +24,11 @@ def main():
             shifts.append(shift)
             save_shifts_to_file(file_path, shifts)
             print("Shift added and saved successfully!")
+        
+        elif choice == '2':
+            display_shifts(shifts)
+        
+        elif choice == '3':
+            date_for_calculation = validate_input("Enter a date (dd/mm/yyyy) to calculate weekly hours from: ", validate_date_format)
+            total_hours = calculate_total_hours(shifts, specific_date)
+            print(f"\nTotal hours worked for the week of {date_for_calculation}: {total_hours:.2f} hours")
