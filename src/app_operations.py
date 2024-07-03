@@ -75,7 +75,7 @@ def validate_input(prompt, validation_func):
     - Each input received from the user is passed to the 'validation_func', if true, the input is considered valid and the function breaks out of the loop. If false, the function prints an error message saying "Invalid input. Please try again" and re-prompts the user. This loop ensures the function does not return until it receives valid input
 
     Parameters:
-    'prompt': A string that is displayed to users to input the correct date format (dd/mm/yyyy)
+    'prompt': A string that is displayed to users to input the data
     'validation_func': A callback function that takes a single string argument and returns a boolean
 
     Return:
