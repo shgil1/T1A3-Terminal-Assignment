@@ -1,4 +1,4 @@
-from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, display_shifts, add_shift, calculate_hours_for_date, find_start_of_week
+from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, display_shifts, add_shift, calculate_hours_for_date, find_start_of_week, validate_name_format
 from file_operations import load_shifts_from_file, save_shifts_to_file
 
 def main():
@@ -16,3 +16,11 @@ def main():
     while True:
         print(options)
         choice = input("Please enter your choice (1-5): ").strip()
+
+        if choice == '1':
+            first_name = validate_input("First Name: ", validate_name_format)
+            last_name = validate_input("Last Name: ", validate_name_format)
+            shift = add_shift(first_name, last_name)
+            shifts.append(shift)
+            save_shifts_to_file(file_path, shifts)
+            print("Shift added and saved successfully!")

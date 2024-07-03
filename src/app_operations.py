@@ -109,6 +109,15 @@ def validate_time_format(time_str):
     except ValueError:
         return False
 
+def validate_name_format(name_str):
+    """ Validate that the name contains only letters 
+    """
+    if name_str.isalpha():
+        return True
+    else:
+        print("Names can only contain alphabetic characters. Please do not include space or numbers.")
+        return False
+
 def display_shifts(shifts):
     """Display the current shifts in a readable format for the user.
     Function:
