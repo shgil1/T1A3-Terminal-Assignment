@@ -43,8 +43,8 @@ def main():
         
         elif choice == '4':
             specific_date = validate_input("Enter a specific date (dd/mm/yyyy) to calculate hours for that day: ", validate_date_format)
-            total_hours = calculate_hours_for_date(shifts, specific_date)
-            print(f"\nTotal hours worked on {specific_date}: {total_hours:.2f}")
+            total_hours = calculate_total_hours(shifts, first_name, last_name, specific_date)
+            print(f"\nTotal hours worked by you on {specific_date}: {total_hours:.2f} hours")
         
         elif choice == '5':
             print("Ok! Enjoy your day, see you next time!")
