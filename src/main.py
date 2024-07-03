@@ -1,10 +1,11 @@
 from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, display_shifts, add_shift, calculate_hours_for_date, find_start_of_week, validate_name_format
 from file_operations import load_shifts_from_file, save_shifts_to_file
 
+# This file path works when you run the program from the executable file
 FILE_PATH = '../data/shifts.json'
+shifts = load_shifts_from_file(FILE_PATH)
 
 def main():
-    shifts = load_shifts_from_file(FILE_PATH)
 
     print("Hello! Welcome to your shift tracker, what would you like to do today?")
     options = """
