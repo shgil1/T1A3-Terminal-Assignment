@@ -1,4 +1,4 @@
-from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, add_shift
+from app_operations import convert_time_format, calculate_total_hours, calculate_hours_worked, validate_input, validate_date_format, validate_time_format, add_shift, calculate_hours_for_date
 from file_operations import load_shifts_from_file, save_shifts_to_file
 
 def main():

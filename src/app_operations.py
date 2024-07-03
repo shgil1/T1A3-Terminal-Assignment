@@ -109,6 +109,24 @@ def validate_time_format(time_str):
     except ValueError:
         return False
 
+def display_shifts(shifts):
+    """Display the current shifts in a readable format for the user.
+    Function:
+    - Allows users to visualise an overview of all shift data
+    - If there are no shifts to display, the function will print "No shifts to display" and return
+    - If there are shifts to display, the function will print a readable string to see name, date, start time, end time and how many hours worked printed in that order
+
+    Parameters:
+    'First_Name', 'Last_Name, 'Date', 'Rostered_Start', 'Rostered_End', 'Hours_Worked'
+    """
+    if not shifts:
+        print("No shifts to display.")
+        return
+
+    for shift in shifts:
+        print(f"{shift['First_Name']} {shift['Last_Name']} - Date: {shift['Date']}, "
+              f"Start: {shift['Rostered_Start']}, End: {shift['Rostered_End']}, "
+              f"Hours Worked: {shift['Hours_Worked']}")
 
 
 def add_shift(first_name, last_name):
