@@ -1,35 +1,60 @@
 # T1A3-Terminal-Assignment
-# Track Employee Work Hours
+# Shift Management System
 
 ## Overview:
-- This app is designed to allow employees to log and track their shifts. It will provide users with a report on the total amount of hours they have worked within a weekly or fortnightly basis. 
+- This Python app is designed to allow employees to log and track their shifts. It provides functionalities to add shifts, calculate total hours worked for an entire week or a specific day and display all shifts for a logged-in employee
 
-### Feature 1: User Menu System:
-- Provides a clear set of 5 total options for users to select from to enhance the user interface
-- Offers various functionalities through a simple menu-drive interface that is easy to use
+### Feature 1: User Menu Options:
+- Upon starting the application, users are presented with a clear and conscise menu detailing 5 options to choose from:
+#### 1. Add a shift
+#### 2. Display my shifts
+#### 3. Calculate my total weekly hours
+#### 4. Calculate my total hours for a specific date
+#### 5. Exit
+
+- Users can navigate through these options by entering the number corresponding to their choice, making it easy to use 
+- After selecting an option and completing the action, the users are brought back to the main menu which allows them the option to select another function or exit the app
+- The menu system uses a loop that continues to display the options until the user selects number 5 to exit the app
+- Conditional statements (if, elif, else) inside the loop react to user input to call the appropriate functions
 
 ### Feature 2: User can make and edit shift details
-- Users are able to input their rostered shift hours 
-- Users are able to add new shift details 
+- Users are able to input their rostered shift hours and specify the date, start and end times
+- The user will input their first and last name, date and start/end times for a shift. The app will then calculate the hours worked based on the start and end times and then save the shifts to the JSON file
 
-### Feature 3: Display all shifts:
-- Users are able to select from the menu to see all shifts that they have saved displayed at once
+### Feature 3: Display all shifts
+- Users are able to select from the menu to see all shifts for the current logged-in employee
+- The app will filter all the shifts to match those with the name of the logged-in employee and display them
 
-### Feature 4: Calculate total hours worked:
-- The total hours worked per week or per fortnight will be calculated based upon the shift start/end time and the date provided by the user 
+### Feature 4: Calculate total weekly hours worked
+- Calculates the total hours worked in one week from Monday to Sunday containing a specified date that is inputted by the user
+- Adjusts the provided data to identify the week as starting on a Monday and ending on Sunday then calculates hours worked for shifts falling within that week
 
 ### Feature 5: Calculate total hours from a specific date:
-- Users can input a date and see how many hours they worked
+- Users can input a date and see how many hours they worked on that specific date
 
 ### Feature 6: Error handling for user input and file operations 
+- Input validation ensures that users input match expected format
+
+#### 1. validate_date_format:
+        - Ensures users can only input correct data in the format of dd/mm/yyyy
+        - Utilises try block to parse 'date_str' into 'datetime.datetime' object using 'date_str, "%d/%m/%Y"' to check format is correct and returns a boolean
+        - Utilises except block to catch any errors to prevent app from crashing 
+
+#### 2. validate_time_format:
+        - Ensures users can only input correct data of HHMM
+        - Utilises try block to parse 'date_str' into 'datetime.datetime' object using 'date_str, "%H%M"' to check format is correct and returns a boolean
+        - Utilises except block to catch any errors to prevent app from crashing 
+
+#### 3. validate_name_format:
+        - Ensures users can only input alphabetic characters withut any spaces or numbers
+        - Utilises conditional statements (if, else)
+        - if false, the function executes an else block and prints an error message to users stating "Names can only contain alphabetic characters. Please do not include space or numbers."
 
 ### Feature 7: Save to JSON file 
 
 ### Feature 8: Load data from JSON file 
 
-## What the features need to include:
-- Walkthrough of the logic of the application
-- Ensure features demonstrate your understanding of the use of variables and the concept of variable scope, loops and conditional control structures and error handling 
+
 
 
 ## Help Documentation:
@@ -49,11 +74,6 @@
 - Checklist feature has to have at least 5 items 
 - Create flowchart on draw.io or something similar to explain logic  
 
-### Requirements File 
-- Different packages you will be using in your project 
-- Depends on the use case 
-- Specific versions within the libraries listed 
-- For other people who download the project can easily run it without any hassle 
 
 ### Virtual Environments
 - Help create isolated environments for projects, ensuring each project has its own dependencies (each packages you install for yourself)
