@@ -109,10 +109,31 @@ def validate_time_format(time_str):
     except ValueError:
         return False
 
-
-
-
-
 def add_shift(first_name, last_name):
-    """Add a new shift based on user input."""
+    """Add a new shift based on user input.
+    Function:
+    - Creates a new shift record by collecting data (name, date, start time and end time) 
+    - Calculates total hours worked
+    
+    Parameters: 
+    'first_name': A string that shows the first name of the employee that is adding the shift
+    'last_name': A string that shows the last name of the employee that is adding the shift
 
+    Return:
+    - A dictionary containing details about the shift including: First name, Last name, Date, Rostered start, Rostered end and Hours worked for that specific employee based on the data that the user inputs
+    - Prints "Shift added successfully!" once the user correctly inputs all the information and the information is saved to the JSON file
+    """
+    date = validate_input("Date (dd/mm/yyyy): ", validate_date_format)
+    start_time = validate_input("Shift Start Time (HHMM, 24-hour format): ", validate_time_format)
+    end_time = validate_input("Shift End Time (HHMM, 24-hour format): ", validate_time_format)
+    hours_worked = calculate_hours_worked(date, start_time, end_time)
+    shift = {
+        "First_Name": first_name,
+        "Last_Name": last_name,
+        "Date": date,
+        "Rostered_Start": start_time,
+        "Rostered_End": end_time,
+        "Hours_Worked": hours_worked
+    }
+    print("\nShift added successfully!")
+    return shift
