@@ -22,26 +22,22 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - [Help Documentation](#help-documentation)
 - [References](#references)
 
+## Features
+- 'FILE_PATH' variable is defined outside any function making it globally accessible and allows it to be used by any function needing to access the file path for loading or saving shifts
 
-
-
-
-
-
-### Feature 1: User Menu Options:
-- Upon starting the application, users are presented with a clear and conscise menu detailing 5 options to choose from:
-#### 1. Add a shift
-#### 2. Display my shifts
-#### 3. Calculate my total weekly hours
-#### 4. Calculate my total hours for a specific date
-#### 5. Exit
-
+### User Menu Options
+- Upon starting the application, users are presented with a clear and conscise menu detailing 5 options to choose from
 - Users can navigate through these options by entering the number corresponding to their choice, making it easy to use 
 - After selecting an option and completing the action, the users are brought back to the main menu which allows them the option to select another function or exit the app
 - The menu system uses a loop that continues to display the options until the user selects number 5 to exit the app
 - Conditional statements (if, elif, else) inside the loop react to user input to call the appropriate functions
+- 'first_name', 'last_name' variables store the users first and last name and are collated once at the beginning of session to ensure that all data added or compiled during the session is specific to that employee. They are defined within the 'main()' function making them local to this function and are not accessible when 'main()' exits
+- 'options' is a string variable that holds the text for the user menu options
+- 'choice' is a variable used to capture the user's menu selection
+- 'while true' loop is used to continually display menu until the user chooses option 5 to exit menu and the loop breaks
+- 'if-elif-else' structures used to process menu selection from 1-5 and 'else' handles any input that is not a valid choice, and displays an error message to prompt the user to input a valid number
 
-### Feature 2: User can add shift details
+### Add shift
 - Users are able to input their rostered shift hours and specify the date, start and end times
 - The user will input their first and last name, date and start/end times for a shift. The app will then calculate the hours worked based on the start and end times and then save the shifts to the JSON file
 
