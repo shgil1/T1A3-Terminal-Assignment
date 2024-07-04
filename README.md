@@ -17,7 +17,7 @@
 - The menu system uses a loop that continues to display the options until the user selects number 5 to exit the app
 - Conditional statements (if, elif, else) inside the loop react to user input to call the appropriate functions
 
-### Feature 2: User can make and edit shift details
+### Feature 2: User can add shift details
 - Users are able to input their rostered shift hours and specify the date, start and end times
 - The user will input their first and last name, date and start/end times for a shift. The app will then calculate the hours worked based on the start and end times and then save the shifts to the JSON file
 
@@ -61,7 +61,7 @@
 - Retrieve previously saved shift data from JSON file
 - Checks and reads the file, if the file exists then the application opens and reads the JSON file
 - The reconstructed data is loaded and made available for use 
-- 
+
 
 
 
@@ -74,15 +74,67 @@
 - Any system/hardware requirements 
 - How to use any command line arguments made for the application 
 
-## Implementation plan
-- Outline how each feature will be implemented and a checklist of tasks for each feature 
-- Prioritise the implementation of different features or checklist items within a feature 
-- Provide a deadline, duration or other time indicator for each feature or checklist/checklist - item 
 
-## Project management platform to track this implementation plan 
-- Screenshots/images to an accessible project management platform to track this (trello)
-- Checklist feature has to have at least 5 items 
-- Create flowchart on draw.io or something similar to explain logic  
+
+## Implementation plan in chronological order:
+
+### Feature 1: Load data from JSON file
+- Create a JSON file and relevant data
+- Loading the data is the first step to set up the application with the necessary data and allows for immediate testing as existing shift data is available for processing and display right from the start
+- Then start writing the file_operations.py and define load_shifts_from_file with the FILE_PATH parameter
+- Utilising the example application demonstrated in the lecture as reference for how to correctly write this
+
+### Feature 2: Save shifts to JSON file
+- Implementing save functionality so the data that the user inputs will be immediately updated and saved to the JSON file 
+- Creating this early will ensure that any data modified or added during development and testing isn't lost and can be used to test for errors
+- Define save_shifts_to_file with the FILE_PATH parameter in file_operations.py 
+- Utilising the example application demonstrated in the lecture as reference for how to correctly write this
+
+### Feature 3: User Menu Option
+- Create a user menu option and outline the core functionalities of the app
+
+### Feature 4: Add Shift
+- Core functionality that allows users to add new shift data 
+- This will then add and save data to the JSON file 
+
+### Feature 5: Display all shifts
+- Once users add shift details, displaying all relevant shift details based upon the employee's name verifiys data
+
+### Feature 6: Calculate total weekly hours worked
+- This feature builds upon feature 3 and 4, allowing users to see a weekly calculation of hours they have worked once inputting a date that can be used for reports and analytics
+
+### Feature 7: Calculate total hours worked
+- Implementing this feature builds on the total weekly hours worked option but allows more flexibility in retrieving retrospective data
+
+### Feature 8: Error handling for User input and File operations
+- Conduct robust error handling and testing to ensure the app doesn't crash for critical errors and any invalid input information 
+
+## Screenshots:
+### Initial app idea layout on paper
+../docs/App_idea,jpeg
+
+### Trello
+../docs/Trello1.png
+../docs/Trello2.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Virtual Environments
