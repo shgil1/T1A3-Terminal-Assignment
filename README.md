@@ -51,8 +51,15 @@
         - if false, the function executes an else block and prints an error message to users stating "Names can only contain alphabetic characters. Please do not include space or numbers."
 
 ### Feature 7: Save to JSON file 
+- Save all user-entered shift data to an external JSON file so data is not lost when the application is closed 
+- Collate all current shift data and convert into JSON format
+- 'json.dump' is used to convert the list of dictionaries ('shifts_data') into JSON formatted string and write it directly to a file
+- 'indent=4' makes it human-readable and provides consistency across the application 
+- 'try-except' block catches and reports errors during file operations 
 
 ### Feature 8: Load data from JSON file 
+
+
 
 
 
