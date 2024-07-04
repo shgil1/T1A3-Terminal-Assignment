@@ -1,4 +1,2 @@
-pytest pip-24.1.1
+pytest 
 datetime
-JSON
-OS

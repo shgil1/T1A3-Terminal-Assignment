@@ -2,7 +2,7 @@ from app_operations import convert_time_format, calculate_total_hours, calculate
 from file_operations import load_shifts_from_file, save_shifts_to_file
 
 # This file path works when you run the program from the executable file
-FILE_PATH = '../data/shifts.json'
+FILE_PATH = './data/shifts.json'
 shifts = load_shifts_from_file(FILE_PATH)
 
 def main():
