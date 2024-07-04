@@ -113,12 +113,12 @@
 ### Initial app idea layout on paper
 ![App idea](image.png)
 
-### Trello
+### Trello:
 ![Trello screenshot 1](image-1.png)
 ![Trello screenshot 2](image-2.png)
 
-
-
+### Flowchart of App:
+![Flowchart of app](docs/Flowchart.jpg)
 
 
 
