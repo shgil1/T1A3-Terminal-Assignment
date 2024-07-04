@@ -8,11 +8,19 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - This Python app is designed to allow employees to log and track their shifts. It provides functionalities to add shifts, calculate total hours worked for an entire week or a specific day and display all shifts for a logged-in employee. 
 
 ## Table of Contents
-[Features](#features)
-[Code Style Guide](#code-style-guide)
-[Implementation Plan](#implementation-plan)
-[Help Documentation](#help-documentation)
-[References](#references)
+- [Features](#features)
+        - [User menu option](#user-menu-option)
+        - [Add shift](#add-shift)
+        - [Display all shifts](#display-all-shifts)
+        - [Calculate total weekly hours worked](#calculate-total-weekly-hours-worked)
+        - [Calculate total hours from a specific date](#calculate-total-hours-from-a-specific-date)
+        - [Error handling](#error-handling)
+        - [Save to JSON file ](#save-to-json-file)
+        - [Load data from JSON file](#load-data-from-json-file)
+- [Code Style Guide](#code-style-guide)
+- [Implementation Plan](#implementation-plan)
+- [Help Documentation](#help-documentation)
+- [References](#references)
 
 
 
@@ -191,3 +199,5 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 If we have to cd into a specific directory to run things, make sure that's noted.
 
 - If you feel like you have to completely rearrange your project to meet the submission structure: stop. Just make new folders for the submission ZIP, move your terminal project into the src folder of the submission folders, and make sure the instruction in the submission readme says to cd into the src/YourProjectHere folder.
+
+[def]: #feature-1
