@@ -29,7 +29,6 @@ def main():
             shift = add_shift(first_name, last_name)
             shifts.append(shift)
             save_shifts_to_file(FILE_PATH, shifts)
-            print("Shift added and saved successfully!")
         
         elif choice == '2':
             # Filter shifts by the current employee and display

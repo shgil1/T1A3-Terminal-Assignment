@@ -9,7 +9,6 @@ def load_shifts_from_file(FILE_PATH):
     try:
         with open(FILE_PATH, 'r') as file:
             shifts = json.load(file)
-            print("\nLoaded shifts successfully!")
             return shifts
     except FileNotFoundError:
         print(f"File not found: {FILE_PATH}. Starting with an empty shift list")
@@ -20,7 +19,6 @@ def save_shifts_to_file(FILE_PATH, shifts):
     try:
         with open(FILE_PATH, 'w') as file:
             json.dump(shifts, file, indent=4)
-            (print("Shifts saved successfully!"))
     except IOError as e:
         # Handle I/O errors
         print(f"Failed to save shifts: I/O error {e}")
