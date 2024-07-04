@@ -1,8 +1,24 @@
 # T1A3-Terminal-Assignment
 # Shift Management System
 
+## Link to GitHub repository:
+https://github.com/shgil1/T1A3-Terminal-Assignment.git
+
 ## Overview:
-- This Python app is designed to allow employees to log and track their shifts. It provides functionalities to add shifts, calculate total hours worked for an entire week or a specific day and display all shifts for a logged-in employee
+- This Python app is designed to allow employees to log and track their shifts. It provides functionalities to add shifts, calculate total hours worked for an entire week or a specific day and display all shifts for a logged-in employee. 
+
+## Table of Contents
+[Features](#features)
+[Code Style Guide](#code-style-guide)
+[Implementation Plan](#implementation-plan)
+[Help Documentation](#help-documentation)
+[References](#references)
+
+
+
+
+
+
 
 ### Feature 1: User Menu Options:
 - Upon starting the application, users are presented with a clear and conscise menu detailing 5 options to choose from:
@@ -161,7 +177,6 @@
 ## Referenced Sources
 - https://docs.python.org/3/library/os.html
 
-## Link to source control repository 
 
 ## Code style guide or styling conventions that the application will adhere to (rerference chosen style guide appropriately)
 
