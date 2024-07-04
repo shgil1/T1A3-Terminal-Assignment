@@ -35,17 +35,17 @@
 ### Feature 6: Error handling for user input and file operations 
 - Input validation ensures that users input match expected format
 
-#### 1. validate_date_format:
+#### 1. 'validate_date_format':
         - Ensures users can only input correct data in the format of dd/mm/yyyy
         - Utilises try block to parse 'date_str' into 'datetime.datetime' object using 'date_str, "%d/%m/%Y"' to check format is correct and returns a boolean
         - Utilises except block to catch any errors to prevent app from crashing 
 
-#### 2. validate_time_format:
+#### 2. 'validate_time_format':
         - Ensures users can only input correct data of HHMM
         - Utilises try block to parse 'date_str' into 'datetime.datetime' object using 'date_str, "%H%M"' to check format is correct and returns a boolean
         - Utilises except block to catch any errors to prevent app from crashing 
 
-#### 3. validate_name_format:
+#### 3. 'validate_name_format':
         - Ensures users can only input alphabetic characters withut any spaces or numbers
         - Utilises conditional statements (if, else)
         - if false, the function executes an else block and prints an error message to users stating "Names can only contain alphabetic characters. Please do not include space or numbers."
@@ -111,11 +111,11 @@
 
 ## Screenshots:
 ### Initial app idea layout on paper
-../docs/App_idea,jpeg
+![App idea](image.png)
 
 ### Trello
-../docs/Trello1.png
-../docs/Trello2.png
+![Trello screenshot 1](image-1.png)
+![Trello screenshot 2](image-2.png)
 
 
 
