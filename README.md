@@ -58,7 +58,10 @@
 - 'try-except' block catches and reports errors during file operations 
 
 ### Feature 8: Load data from JSON file 
-
+- Retrieve previously saved shift data from JSON file
+- Checks and reads the file, if the file exists then the application opens and reads the JSON file
+- The reconstructed data is loaded and made available for use 
+- 
 
 
 
@@ -104,6 +107,7 @@
 - Open file first, make changes and then close the files 
 
 ## Referenced Sources
+- https://docs.python.org/3/library/os.html
 
 ## Link to source control repository 
 
