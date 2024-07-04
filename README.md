@@ -40,19 +40,21 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ### Add shift
 - Users are able to input their rostered shift hours and specify the date, start and end times
 - The user will input their first and last name, date and start/end times for a shift. The app will then calculate the hours worked based on the start and end times and then save the shifts to the JSON file
+- 'shift' variable is the dictionary that represents newly added shifts that includes attributes of employee's name, shift date, start/end times and hours worked. It is created and returned by the 'add_shift()' function and used locally within the 'if' block
+- 'date', 'start_time', 'end_time', 'hours_worked', 'first_name' and 'last_name' are all variables collected within the 'add_shift()' function and defined locally and then returned to the global 'shifts' list which is defined outside the 'main()'
 
-### Feature 3: Display all shifts
+### Display all shifts
 - Users are able to select from the menu to see all shifts for the current logged-in employee
 - The app will filter all the shifts to match those with the name of the logged-in employee and display them
 
-### Feature 4: Calculate total weekly hours worked
+### Calculate total weekly hours worked
 - Calculates the total hours worked in one week from Monday to Sunday containing a specified date that is inputted by the user
 - Adjusts the provided data to identify the week as starting on a Monday and ending on Sunday then calculates hours worked for shifts falling within that week
 
-### Feature 5: Calculate total hours from a specific date:
+### Calculate total hours from a specific date
 - Users can input a date and see how many hours they worked on that specific date
 
-### Feature 6: Error handling for user input and file operations 
+### Error handling
 - Input validation ensures that users input match expected format
 
 #### 1. 'validate_date_format':
@@ -70,14 +72,14 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
         - Utilises conditional statements (if, else)
         - if false, the function executes an else block and prints an error message to users stating "Names can only contain alphabetic characters. Please do not include space or numbers."
 
-### Feature 7: Save to JSON file 
+### Save to JSON file 
 - Save all user-entered shift data to an external JSON file so data is not lost when the application is closed 
 - Collate all current shift data and convert into JSON format
 - 'json.dump' is used to convert the list of dictionaries ('shifts_data') into JSON formatted string and write it directly to a file
 - 'indent=4' makes it human-readable and provides consistency across the application 
 - 'try-except' block catches and reports errors during file operations 
 
-### Feature 8: Load data from JSON file 
+### Load data from JSON file 
 - Retrieve previously saved shift data from JSON file
 - Checks and reads the file, if the file exists then the application opens and reads the JSON file
 - The reconstructed data is loaded and made available for use 
