@@ -61,6 +61,8 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 ### Calculate total hours from a specific date
 - Users can input a date and see how many hours they worked on that specific date
+- 'specific_date' is derived from the 'date_str' input and is a variable that represents the date converted into a 'datetime' object, which allows calculation against other dates in the 'shifts' data. It is defined locally within the function 'total_hours' that calculates the total hours worked
+- Condtitional statements are used within the loop to check if the date of each shift is greater than or equal to the 'specific_date' function to ensure correct calculation
 
 ### Error handling
 - Input validation ensures that users input match expected format
