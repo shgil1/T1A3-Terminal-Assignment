@@ -58,7 +58,6 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - 'total_hours' accumulates the total hours worked within the specified week, it's used within the loop that iterates over shifts and sums up the hours
 - 'date_str', 'start_date', 'end_date', 'total_hours' are local to the 'calculate_total_hours' function
 
-
 ### Calculate total hours from a specific date
 - Users can input a date and see how many hours they worked on that specific date
 - 'specific_date' is derived from the 'date_str' input and is a variable that represents the date converted into a 'datetime' object, which allows calculation against other dates in the 'shifts' data. It is defined locally within the function 'total_hours' that calculates the total hours worked
@@ -95,17 +94,11 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - The reconstructed data is loaded and made available for use 
 - 'if-else' statements are used to check the success of loading the JSON file 
 
+## Code Style Guide
 
 
 
 
-
-## Help Documentation:
-- Decribe how to use and install the application
-- Steps to install the application 
-- Any dependencies required by the application to operate 
-- Any system/hardware requirements 
-- How to use any command line arguments made for the application 
 
 
 
@@ -147,18 +140,36 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ![App idea](image.png)
 
 ### Trello:
-![Trello screenshot 1](image-1.png)
-![Trello screenshot 2](image-2.png)
+![Trello Screenshot 1](image-1.png)
+![Trello Screenshot 2](image-2.png)
 
 ### Flowchart of App:
 ![Flowchart of app](docs/Flowchart.jpg)
 
+## Help Documentation:
+### Important Notes 
+### Dependencies 
+- To run this application, you must have python 3 installed. This application also requires the following dependencies 
+### Installation
+### Using the application
+
+### Command line arguments
+- This application supports several command line arguments that perform operations directly from the CLI without having to interact with user menu: 
+1. '--add-shift': Directly adds a shift 
+2. '--calculate-hours': Calculates the total hours for the current week or for a specific date if provided
+3. '--display-shifts': Displays all previously recorded shifts 
+
+- Decribe how to use and install the application
+- Steps to install the application 
+- Any dependencies required by the application to operate 
+- Any system/hardware requirements 
+- How to use any command line arguments made for the application 
 
 
 
-
-
-
+## References
+- Datetime - basic date and time types Python documentation. Available at: https://docs.python.org/3/library/datetime.html (Accessed: 25 June 2024).
+- OS - miscellaneous operating system interfaces Python documentation. Available at: https://docs.python.org/3/library/os.html (Accessed: 25 June 2024).
 
 
 
@@ -190,9 +201,6 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ## File Handling 
 - Read and write data from and to files 
 - Open file first, make changes and then close the files 
-
-## Referenced Sources
-- https://docs.python.org/3/library/os.html
 
 
 ## Code style guide or styling conventions that the application will adhere to (rerference chosen style guide appropriately)

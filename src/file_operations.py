@@ -1,5 +1,4 @@
 import json
-import os
 
 def load_shifts_from_file(FILE_PATH):
     """ Load shifts from JSON file 
