@@ -42,14 +42,22 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - The user will input their first and last name, date and start/end times for a shift. The app will then calculate the hours worked based on the start and end times and then save the shifts to the JSON file
 - 'shift' variable is the dictionary that represents newly added shifts that includes attributes of employee's name, shift date, start/end times and hours worked. It is created and returned by the 'add_shift()' function and used locally within the 'if' block
 - 'date', 'start_time', 'end_time', 'hours_worked', 'first_name' and 'last_name' are all variables collected within the 'add_shift()' function and defined locally and then returned to the global 'shifts' list which is defined outside the 'main()'
+- 'add_shift()' uses conditional statements by requiring input validation via 'validate_input()' function to ensure the data is in the correct format before accepting the data
 
 ### Display all shifts
 - Users are able to select from the menu to see all shifts for the current logged-in employee
 - The app will filter all the shifts to match those with the name of the logged-in employee and display them
+- 'employee_shifts' is a locally defined variable within the scope of the user menu option to display shifts, it filers the 'shifts' list to only show shifts relevant to the logged-in employee based on the 'first_name' and 'last_name' provided at login
+- If-else structure is used in the 'display_shifts' function to check if there are any shifts to display
 
 ### Calculate total weekly hours worked
 - Calculates the total hours worked in one week from Monday to Sunday containing a specified date that is inputted by the user
 - Adjusts the provided data to identify the week as starting on a Monday and ending on Sunday then calculates hours worked for shifts falling within that week
+- 'date_str' is the string input by the user representing the date from which to start the weekly calculation
+- 'start_date' and 'end_date' variables within the function define the range of the week for which hours are calculated 
+- 'total_hours' accumulates the total hours worked within the specified week, it's used within the loop that iterates over shifts and sums up the hours
+- 'date_str', 'start_date', 'end_date', 'total_hours' are local to the 'calculate_total_hours' function
+
 
 ### Calculate total hours from a specific date
 - Users can input a date and see how many hours they worked on that specific date
