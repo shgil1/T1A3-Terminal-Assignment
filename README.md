@@ -93,6 +93,7 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - Retrieve previously saved shift data from JSON file
 - Checks and reads the file, if the file exists then the application opens and reads the JSON file
 - The reconstructed data is loaded and made available for use 
+- 'if-else' statements are used to check the success of loading the JSON file 
 
 
 
