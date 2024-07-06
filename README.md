@@ -150,8 +150,20 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ### Important Notes 
 ### Dependencies 
 - To run this application, you must have python 3 installed. This application also requires the following dependencies 
+
 ### Installation
+- To install this app, download the src folder containing the source code of the project from SharlaGilbert_T1A3 folder. A virtual environment will be created and activated and the included packages will also be installed. 
+- To launch the application enter ./run.sh and the application will begin
+
 ### Using the application
+- After launching the application you will be prompted to enter your first and last name 
+- After inputting your name, you will be directed to the user name and greeted by your name
+- You will be presented with a user menu that includes 5 options to choose from
+- Use the numbers associated with each menu item to navigate through the application 
+![User Menu Screenshot](image-3.png)
+
+
+
 
 ### Command line arguments
 - This application supports several command line arguments that perform operations directly from the CLI without having to interact with user menu: 
