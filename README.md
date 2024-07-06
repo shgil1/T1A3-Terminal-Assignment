@@ -137,7 +137,7 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 ## Screenshots:
 ### Initial app idea layout on paper
-![App idea](image.png)
+![App Idea](image-4.png)
 
 ### Trello:
 ![Trello Screenshot 1](image-1.png)
@@ -160,8 +160,26 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - After inputting your name, you will be directed to the user name and greeted by your name
 - You will be presented with a user menu that includes 5 options to choose from
 - Use the numbers associated with each menu item to navigate through the application 
+
 ![User Menu Screenshot](image-3.png)
 
+1. Add a shift: This option allows you to add a new shift by entering specific details and the app will record and save the shift 
+- Select this option from menu by pressing 1 and 'Enter'
+- Follow the prompts to enter the date of the shift in the format DD/MM/YYYY, the start time in 24 hour format (HHMM) and the end start also in 24 hour time (HHMM)
+- The app will use this data to calculate the hours worked based on the start and end times and save this shift 
+- You will receive a confirmation message saying "Shift added successfully!" 
+- You will then return to the main menu 
+
+![Add shift screenshot](image-5.png)
+
+
+
+
+
+2. Display my shifts
+3. Calculate my total weekly hours
+4. Calculate my total hours for a specific date 
+5. Exit 
 
 
 

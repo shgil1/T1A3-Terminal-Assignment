@@ -78,5 +78,13 @@
         "Rostered_Start": "0000",
         "Rostered_End": "1100",
         "Hours_Worked": 11.0
+    },
+    {
+        "First_Name": "maya",
+        "Last_Name": "smith",
+        "Date": "22/07/2024",
+        "Rostered_Start": "0900",
+        "Rostered_End": "1700",
+        "Hours_Worked": 8.0
     }
 ]
