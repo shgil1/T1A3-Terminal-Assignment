@@ -2,28 +2,27 @@ import datetime
 
 def convert_time_format(time_str):
     """Convert time from HHMM format to datetime.time object.
-    Function:
-    - Converts string representing 24 hour time without any colons into datetime.time object
 
     Parameters:
-    'time_str': HHMM format intended to eliminate errors and confusion when handling time-related operations and the expected outcome is a readable time
+    'time_str': HHMM format without any colons
+
+    Returns: 
+    datetime.time: A datetime object representing the time that is provided
     """
     return datetime.datetime.strptime(time_str, "%H%M").time()
 
 def calculate_total_hours(shifts, first_name, last_name, date_str, mode='daily'):
     """ Calculate total hours worked for a particular employee for either the entire week or a single day based on a specific date inputted.
-    Function: 
-    - Parses the 'specific_date' into a 'datetime.datetime' object
-    - Uses 'find_start_of_week' to adjust 'specific_date' to ensure the calculation of the week begins from the Monday
-    - Calculates hours worked only on the day specified by 'date_str'
 
     Parameters:
-    'shifts': List of dictionaries, each dictionary represents a shift and must include: 'date', 'Hours_worked', 'First_Name', 'Last_Name' <-- These parameters are used to filter shifts to those relevant to the specified employee, identifiable by their name (first/last)
-    'specific_date': A string representing the start date from which the calculation begins (dd/mm/yyyy) and the function will then calculate the total hours from this date through the subsequent six days, constituting a full week
-    'mode': This string specifies the mode of calculation with possible values of daily or weekly, if daily then hours are calculated from results on 'date_str' or if weekly, then results are calculated based on total hours from Monday to Sunday of week containing 'date_str'
-
+    'shifts' (list): List of dictionaries, containing details of a shift
+    'first_name'(str): First name of employee
+    'last_name' (str): Last name of employee
+    'date_str'(str): Start date for calculating hours, formatted as DD/MM/YYYY 
+    'mode' (str): Mode of calculation daily or weekly, defaults to daily 
+    
     Returns:
-    'total_hours': Float, Calculation for the total number of hours worked within the specified period by summing up the 'hours_worked' from the filtered shifts during that week for the identified employee
+    'total_hours' (float): Total hours worked within the specified period
     """
     date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
     if mode == 'weekly':
@@ -45,15 +44,14 @@ def calculate_total_hours(shifts, first_name, last_name, date_str, mode='daily')
 
 def calculate_hours_worked(date_str, start_time_str, end_time_str):
     """Calculate the hours worked for a single shift.
-    Function: 
-    - Converts 'date_str', 'start_time_str', 'end_time_str' into 'datetime' objects representing the start and end of the shift
-    - Calculates duration of shift by subtracting start time from end time and converting duration from seconds to hours
-    - If end time is earlier than the start time for an overnight shift, function adjust to add a day to the end time to calculate correct duration of shift
 
     Parameters:
-    date_str: String for date of shift is expected in the format of dd/mm/yyyy
-    start_time_str: String for start of shift is expected in the 24 hour format to avoid confusion for am or pm shifts
-    end_time_str: String for end of shift in 24 hour format
+    'date_str' (str): The date of the shift in the format of DD/MM/YYYY
+    'start_time' (str): The start time of the shift in the format of HHMM
+    'end_time' (str): SThe end time of the shift in the format of HHMM
+
+    Return: 
+    'total_hours' (float): The total hours worked during the shift
     """
     date = datetime.datetime.strptime(date_str, "%d/%m/%Y")
     start_time = datetime.datetime.strptime(start_time_str, "%H%M").time()
@@ -70,16 +68,13 @@ def calculate_hours_worked(date_str, start_time_str, end_time_str):
 
 def validate_input(prompt, validation_func):
     """Prompt user input and validate it using the provided validation function.
-    Function:
-    - Initiates a loop via 'prompt' string to prompt user for input
-    - Each input received from the user is passed to the 'validation_func', if true, the input is considered valid and the function breaks out of the loop. If false, the function prints an error message saying "Invalid input. Please try again" and re-prompts the user. This loop ensures the function does not return until it receives valid input
-
+   
     Parameters:
-    'prompt': A string that is displayed to users to input the data
-    'validation_func': A callback function that takes a single string argument and returns a boolean
+    'prompt' (str): Prompt to display to the user to input data
+    'validation_func' (function): A callback function that takes a single string argument and returns a boolean
 
     Return:
-    'user_input': This function returns the user input as a string after it has been validated by the 'validation_func' to ensure the output of function is always valid as per the defined criteria 
+    'user_input' (str): The validated input
     """
     while True:
         user_input = input(prompt)
@@ -89,7 +84,14 @@ def validate_input(prompt, validation_func):
             print("Invalid input. Please try again.")
 
 def validate_date_format(date_str):
-    """Validate date format."""
+    """Validate if a string is in correct date format of DD/MM/YYYY
+    
+    Parameters:
+    'date_str' (str): Date string to validate format
+    
+    Returns:
+    Boolean: True if the date string is valid, otherwise False
+    """
     try:
         datetime.datetime.strptime(date_str, "%d/%m/%Y")
         return True
@@ -97,7 +99,14 @@ def validate_date_format(date_str):
         return False
 
 def validate_time_format(time_str):
-    """Validate time format."""
+    """Validate time string is in correct time format of HHMM
+    
+    Parameters: 
+    'time_str' (str): Time string to validate format
+    
+    Returns:
+    Boolean: True if the time string is valid, otherwise False
+    """
     try:
         datetime.datetime.strptime(time_str, "%H%M")
         return True
@@ -105,7 +114,14 @@ def validate_time_format(time_str):
         return False
 
 def validate_name_format(name_str):
-    """ Validate that the name contains only letters """
+    """ Validate that the name contains only alphabetical characters
+     
+    Parameters:
+    'name_str' (str): Name string to validate format
+     
+    Returns:
+    Boolean: True if the name is valid, otherwise False
+    """
     if name_str.isalpha():
         return True
     else:
@@ -114,10 +130,6 @@ def validate_name_format(name_str):
 
 def display_shifts(shifts):
     """Display the current shifts in a readable format for the user.
-    Function:
-    - Allows users to visualise an overview of all shift data
-    - If there are no shifts to display, the function will print "No shifts to display" and return
-    - If there are shifts to display, the function will print a readable string to see name, date, start time, end time and how many hours worked printed in that order
 
     Parameters:
     'First_Name', 'Last_Name, 'Date', 'Rostered_Start', 'Rostered_End', 'Hours_Worked'

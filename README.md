@@ -156,6 +156,10 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ### Dependencies 
 - To run this application, you must have python 3 installed. This application also requires the following dependencies that can be installed from Python's package installer pip:
 
+- pytest==3.9.6
+- datetime==3.9.6
+- autopep8==3.9.6
+
 ![Pip Install Script](./docs/pip_install.jpg)
 
 ### Installation
@@ -222,13 +226,6 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 2. '--calculate-hours': Calculates the total hours for the current week or for a specific date if provided
 3. '--display-shifts': Displays all previously recorded shifts 
 
-- Decribe how to use and install the application
-- Steps to install the application 
-- Any dependencies required by the application to operate 
-- Any system/hardware requirements 
-- How to use any command line arguments made for the application 
-
-
 
 ## References
 - Datetime - basic date and time types Python documentation. Available at: https://docs.python.org/3/library/datetime.html (Accessed: 25 June 2024).
@@ -240,37 +237,8 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 
 
-
-
-
-
-### Virtual Environments
-- Help create isolated environments for projects, ensuring each project has its own dependencies (each packages you install for yourself)
-
-## Pytest
-- Power and user-friendly testing framework 
-- Simple yet powerful package/library 
-- Assert (logic/condition true or false value if its true then nothing happens, if its false then it throws an assertion error message)
-- Use assert in project testing, make sure our logic is working properly to make sure the output retrieved is the output we expected
-- Pytest follows the principle of asserting and that things are true in order for a test to pass, for a test to pass the assert value must be true 
-
-## Error Handling
-- Try 
-- Value error 
-
-## Initialising 
-- Initialising packages to use them in other folders  
-
-## File Handling 
-- Read and write data from and to files 
-- Open file first, make changes and then close the files 
-
-
 ## Code style guide or styling conventions that the application will adhere to (rerference chosen style guide appropriately)
-
-## Commenting 
-- Indention
-- Define function, what is it about, what types of argument it accepts, and what output you expect from that specfic function  
+- docstrings 
 
 ## Important things to note for the README:
 - And generally, for the class: just remembering the portfolio submissions -- please, please, please, confirm that you can run your submission in its submission structure before submitting it. We can NOT edit your submissions. If your submission does not work for you, it will not work for us. 
