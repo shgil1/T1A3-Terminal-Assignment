@@ -137,19 +137,21 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 ## Screenshots:
 ### Initial app idea layout on paper
-![App Idea](image-4.png)
+![App Idea](./docs/App_idea.jpg)
 
 ### Trello:
-![Trello Screenshot 1](image-1.png)
-![Trello Screenshot 2](image-2.png)
+![Trello Screenshot 1](./docs/Trello1.png)
+![Trello Screenshot 2](./docs/Trello2.png)
 
 ### Flowchart of App:
 ![Flowchart of app](docs/Flowchart.jpg)
 
 ## Help Documentation:
-### Important Notes 
+
 ### Dependencies 
-- To run this application, you must have python 3 installed. This application also requires the following dependencies 
+- To run this application, you must have python 3 installed. This application also requires the following dependencies that can be installed from Python's package installer pip:
+
+![alt text](./docs/pip_install.jpg)
 
 ### Installation
 - To install this app, download the src folder containing the source code of the project from SharlaGilbert_T1A3 folder. A virtual environment will be created and activated and the included packages will also be installed. 
@@ -170,14 +172,14 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - You will receive a confirmation message saying "Shift added successfully!" 
 - You will then return to the main menu 
 
-![Add shift screenshot](image-5.png)
+![Add shift screenshot](./docs/add_shift.jpg)
 
 2. **Display my shifts:** This option allows you an overview of all the shifts you have entered into the system 
 - Select this option from the menu by pressing '2' and 'Enter'
 - The app will display all your recorded shifts including date, start/end time and total hours worked
 - You will then return to the main menu 
 
-![Display Shifts](image-6.png)
+![Display Shifts](./docs/Display_shifts.jpg)
 
 3. **Calculate my total weekly hours:** This option will calculate and display the total number of hours you have worked in a week starting from any given date that you specify 
 - Select this option from the menu by pressing '3' and 'Enter'
@@ -185,7 +187,7 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - The app will then calculate the total hours worked from that date to the end of the week and display the result 
 - You will then return to the main menu 
 
-![Calculate weekly hours](image-7.png)
+![Calculate weekly hours](./docs/Calculate_weekly_hours.jpg)
 
 4. **Calculate my total hours for a specific date:** This option will calculate and display the total hours you worked on a specific date 
 - Select this option from the menu by pressing '4' and 'Enter'
@@ -193,16 +195,14 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - The app will then calculate and show the total hours worked on that day
 - You will then return to the main menu
 
-![Specific date](image-8.png)
+![Specific date](./docs/specific_date.jpg)
 
 5. **Exit:** This option will allow you to exit the app completely 
 - Select this option from the menu at any time to exit the app by pressing '5' and 'Enter' 
 - You will receive a message saying 'Ok! Enjoy your day, see you next time!'
 - The application will close
 
-![exit](image-9.png)
-
-
+![exit](./docs/exit.jpg)
 
 ### Command line arguments
 - This application supports several command line arguments that perform operations directly from the CLI without having to interact with user menu: 
