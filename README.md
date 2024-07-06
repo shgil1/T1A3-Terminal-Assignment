@@ -147,15 +147,27 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 ![Flowchart of app](docs/Flowchart.jpg)
 
 ## Help Documentation:
+### Important Notes
+- This application has been designed and tested on a Macbook and is only confirmed to work on Unix-like systems, this application has not been tested on Windows systems but presumably will work if Python 3 is installed. 
+- Operation Systems required: MacOS X Mojave or later, Windows 10 or later, Ubuntu 18.09LTS or later
+- Hardware required: At least 1GHz CPU, 512MB RAM, at least 100MB of free disk space
+- Please create a seperate terminal window before beginning the application 
 
 ### Dependencies 
 - To run this application, you must have python 3 installed. This application also requires the following dependencies that can be installed from Python's package installer pip:
 
-![alt text](./docs/pip_install.jpg)
+![Pip Install Script](./docs/pip_install.jpg)
 
 ### Installation
-- To install this app, download the src folder containing the source code of the project from SharlaGilbert_T1A3 folder. A virtual environment will be created and activated and the included packages will also be installed. 
-- To launch the application enter ./run.sh and the application will begin
+- To install this app, download the ZIP file named "SharlaGilbert_T1A3" and extract it
+- Open your terminal and check if you have Python 3 installed by navigating to where the "check_install_python.sh" file is located
+
+![Check Python Script](./docs/check_python.jpg)
+
+- If you do not have Python 3 installed, run the script prompted to install to your computer
+- If you have any issues running the script, please enter the following command into your terminal to make the script executable 
+
+![Executable Script](./docs/executable.jpg)
 
 ### Using the application
 - After launching the application you will be prompted to enter your first and last name 
