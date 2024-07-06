@@ -95,12 +95,10 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - 'if-else' statements are used to check the success of loading the JSON file 
 
 ## Code Style Guide
-
-
-
-
-
-
+- This code adheres to the PEP 8 style guide for Python which includes the following:
+- Variables are named in lowercase, with underscores 
+- Indentation using four spaces 
+- Double quotes are consistently used 
 
 ## Implementation plan in chronological order:
 
@@ -226,26 +224,6 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 2. '--calculate-hours': Calculates the total hours for the current week or for a specific date if provided
 3. '--display-shifts': Displays all previously recorded shifts 
 
-
 ## References
 - Datetime - basic date and time types Python documentation. Available at: https://docs.python.org/3/library/datetime.html (Accessed: 25 June 2024).
 - OS - miscellaneous operating system interfaces Python documentation. Available at: https://docs.python.org/3/library/os.html (Accessed: 25 June 2024).
-
-
-
-
-
-
-
-## Code style guide or styling conventions that the application will adhere to (rerference chosen style guide appropriately)
-- docstrings 
-
-## Important things to note for the README:
-- And generally, for the class: just remembering the portfolio submissions -- please, please, please, confirm that you can run your submission in its submission structure before submitting it. We can NOT edit your submissions. If your submission does not work for you, it will not work for us. 
-
-- Part of the assessment is to write instructions on how to run your app - this is what those instructions should be for. 
-If we have to cd into a specific directory to run things, make sure that's noted.
-
-- If you feel like you have to completely rearrange your project to meet the submission structure: stop. Just make new folders for the submission ZIP, move your terminal project into the src folder of the submission folders, and make sure the instruction in the submission readme says to cd into the src/YourProjectHere folder.
-
-[def]: #feature-1

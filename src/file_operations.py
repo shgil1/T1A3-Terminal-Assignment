@@ -14,7 +14,16 @@ def load_shifts_from_file(FILE_PATH):
         return []
 
 def save_shifts_to_file(FILE_PATH, shifts):
-    """Save shifts to JSON file"""
+    """Save shifts to JSON file
+    Parameters: 
+    FILE_PATH (str): Path to JSON file where shifts data will be saved
+    shifts (list): A list of shift data
+
+    Raises:
+    IOError: If the file cannot be opened for writing
+    TypeError: If the data contains cannot be translated to JSON file
+    """
+    
     try:
         with open(FILE_PATH, 'w') as file:
             json.dump(shifts, file, indent=4)

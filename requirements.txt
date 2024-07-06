@@ -1,3 +1,3 @@
-pytest 3.9.6 # Module used to efficicently test the code 
-datetime 3.9.6 # Module used to efficiently manipulate dates and times for output formatting
-autopep8 3.9.6 # Code style guide 
+pytest # Module used to efficicently test the code 
+datetime  # Module used to efficiently manipulate dates and times for output formatting
+autopep8  # Code style guide 
