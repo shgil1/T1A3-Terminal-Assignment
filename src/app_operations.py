@@ -132,7 +132,10 @@ def display_shifts(shifts):
     """Display the current shifts in a readable format for the user.
 
     Parameters:
-    'First_Name', 'Last_Name, 'Date', 'Rostered_Start', 'Rostered_End', 'Hours_Worked'
+    'shifts' (list): A list of shift dictionaries to display
+
+    Returns: 
+    None
     """
     if not shifts:
         print("No shifts to display.")
@@ -146,17 +149,13 @@ def display_shifts(shifts):
 
 def add_shift(first_name, last_name):
     """Add a new shift based on user input.
-    Function:
-    - Creates a new shift record by collecting data (name, date, start time and end time) 
-    - Calculates total hours worked
     
     Parameters: 
-    'first_name': A string that shows the first name of the employee that is adding the shift
-    'last_name': A string that shows the last name of the employee that is adding the shift
+    'first_name' (str): First name of employee
+    'last_name' (str): Last name of employee
 
-    Return:
-    - A dictionary containing details about the shift including: First name, Last name, Date, Rostered start, Rostered end and Hours worked for that specific employee based on the data that the user inputs
-    - Prints "Shift added successfully!" once the user correctly inputs all the information and the information is saved to the JSON file
+    Returns:
+    A dictionary containing the details of the added shift and all previous shifts
     """
     date = validate_input("Date (dd/mm/yyyy): ", validate_date_format)
     start_time = validate_input("Shift Start Time (HHMM, 24-hour format): ", validate_time_format)
