@@ -163,8 +163,8 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 ![User Menu Screenshot](image-3.png)
 
-1. Add a shift: This option allows you to add a new shift by entering specific details and the app will record and save the shift 
-- Select this option from menu by pressing 1 and 'Enter'
+1. **Add a shift:** This option allows you to add a new shift by entering specific details and the app will record and save the shift 
+- Select this option from the menu by pressing '1' and 'Enter'
 - Follow the prompts to enter the date of the shift in the format DD/MM/YYYY, the start time in 24 hour format (HHMM) and the end start also in 24 hour time (HHMM)
 - The app will use this data to calculate the hours worked based on the start and end times and save this shift 
 - You will receive a confirmation message saying "Shift added successfully!" 
@@ -172,14 +172,15 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 
 ![Add shift screenshot](image-5.png)
 
+2. **Display my shifts:** This option allows you an overview of all the shifts you have entered into the system 
+- Select this option from the menu by pressing '2' and 'Enter'
+- The app will display all your recorded shifts including date, start/end time and total hours worked
 
+![Display Shifts](image-6.png)
 
-
-
-2. Display my shifts
-3. Calculate my total weekly hours
-4. Calculate my total hours for a specific date 
-5. Exit 
+3. **Calculate my total weekly hours:**
+4. **Calculate my total hours for a specific date:**
+5. **Exit:**
 
 
 
