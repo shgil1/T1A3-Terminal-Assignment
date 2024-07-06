@@ -177,7 +177,7 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 - You will be presented with a user menu that includes 5 options to choose from
 - Use the numbers associated with each menu item to navigate through the application 
 
-![User Menu Screenshot](image-3.png)
+![User Menu Screenshot](./docs/user_menu.jpg)
 
 1. **Add a shift:** This option allows you to add a new shift by entering specific details and the app will record and save the shift 
 - Select this option from the menu by pressing '1' and 'Enter'
