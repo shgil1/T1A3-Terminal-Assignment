@@ -175,12 +175,32 @@ https://github.com/shgil1/T1A3-Terminal-Assignment.git
 2. **Display my shifts:** This option allows you an overview of all the shifts you have entered into the system 
 - Select this option from the menu by pressing '2' and 'Enter'
 - The app will display all your recorded shifts including date, start/end time and total hours worked
+- You will then return to the main menu 
 
 ![Display Shifts](image-6.png)
 
-3. **Calculate my total weekly hours:**
-4. **Calculate my total hours for a specific date:**
-5. **Exit:**
+3. **Calculate my total weekly hours:** This option will calculate and display the total number of hours you have worked in a week starting from any given date that you specify 
+- Select this option from the menu by pressing '3' and 'Enter'
+- You will be prompted to enter a date in the format DD/MM/YYYY which will be the starting point of the week for which the total hours worked will be calculated 
+- The app will then calculate the total hours worked from that date to the end of the week and display the result 
+- You will then return to the main menu 
+
+![Calculate weekly hours](image-7.png)
+
+4. **Calculate my total hours for a specific date:** This option will calculate and display the total hours you worked on a specific date 
+- Select this option from the menu by pressing '4' and 'Enter'
+- You will be prompted to enter a date in the format DD/MM/YYYY for which you want to calculate the hours worked 
+- The app will then calculate and show the total hours worked on that day
+- You will then return to the main menu
+
+![Specific date](image-8.png)
+
+5. **Exit:** This option will allow you to exit the app completely 
+- Select this option from the menu at any time to exit the app by pressing '5' and 'Enter' 
+- You will receive a message saying 'Ok! Enjoy your day, see you next time!'
+- The application will close
+
+![exit](image-9.png)
 
 
 
